@@ -7,3 +7,44 @@
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    --black-color: rgb(15, 20, 25);
+    --primary-color: rgb(29, 155, 240);
+  }
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply m-0 box-border p-0;
+  }
+
+  html,
+  body {
+    @apply h-full;
+  }
+
+  html {
+    @apply overflow-y-auto overscroll-y-none text-[0.938rem];
+    scrollbar-color: rgb(185, 202, 211) rgb(247, 249, 249);
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  body {
+    @apply m-0 bg-white;
+    scrollbar-color: rgb(185, 202, 211) rgb(247, 249, 249);
+  }
+
+  button {
+    @apply cursor-pointer outline-none;
+  }
+
+  input {
+    @apply outline-none;
+  }
+}
